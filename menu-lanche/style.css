@@ -1,0 +1,88 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    size: 12ch;
+    transition: 0.8s;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox .trace{
+    width: 90px;
+    height: 9px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.8s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1){
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+    top: 66px;
+    transform: rotate(0);
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+    background-color: black;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: rotate(360deg);
+    top: 46px;
+    background-color: rgb(197, 196, 196);
+
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+    background-color: black;
+
+}
+
+
+.checkbox .logo{
+    position: relative;
+    left: 100px;
+    top: 20px;
+    transition: 0.8s ease-in-out;
+    color: white;
+}
+
+#toggle:checked +.checkbox .logo{
+   color: black;
+}
